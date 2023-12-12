@@ -1,19 +1,26 @@
 package ie.atu;
+import java.util.Scanner;
 
 // Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
 // then press Enter. You can now see whitespace characters in your code.
 public class Main {
     public static void main(String[] args) {
-        // Press Alt+Enter with your caret at the highlighted text to see how
-        // IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
 
-        // Press Shift+F10 or click the green arrow button in the gutter to run the code.
-        for (int i = 1; i <= 5; i++) {
-
-            // Press Shift+F9 to start debugging your code. We have set one breakpoint
-            // for you, but you can always add more by pressing Ctrl+F8.
-            System.out.println("i = " + i);
-        }
+        ShiftWorker user =new ShiftWorker();
+        Scanner keyboard = new Scanner (System.in);
+        user.getName();
+        user.getGender();
+        user.getShift();
+        user.getAge();
+        System.out.println("Hello, Please enter your details below: \n");
+        System.out.println("Name: \n");
+        user.setName(Scanner.nextLine());
+        System.out.println("Gender: Male, Female, NB \n");
+        user.setGender(Scanner.nextLine());
+        System.out.println("Shift: 1 or 2 \n");
+        user.setShift(Scanner.nextLine());
+        System.out.println("Age: must be above 18 \n");
+        user.setAge(Scanner.nextLine());
+        user.displayInfo();
     }
 }
